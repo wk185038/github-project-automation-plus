@@ -13,7 +13,8 @@ const generateMutationQuery = require('./generate-mutation-query');
 		const action = core.getInput('action') || 'update';
 
 		// Get data from the current action
-		const {eventName, nodeId, url} = getActionData(github.context);
+		const {eventName, nodeId, url, data} = getActionData(github.context);
+		console.log(data)
 
 		// Create a method to query GitHub
 		const octokit = new github.GitHub(token);

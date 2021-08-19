@@ -25,7 +25,8 @@ const getActionData = githubContext => {
 		eventName,
 		action: payload.action,
 		nodeId: githubData.node_id,
-		url: githubData.html_url
+		url: githubData.html_url,
+		data: githubData
 	};
 };
 
